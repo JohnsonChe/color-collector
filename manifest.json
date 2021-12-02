@@ -6,13 +6,7 @@
     "default_icon": "defaultIcon.png",
     "default_popup": "popup.html"
   },
-  "default_locale": "en",
   "description": "Collects all site colors",
-  "icons": {
-    "16": "",
-    "48": "",
-    "128": ""
-  },
   "permissions": [
     "activeTab"
   ]
