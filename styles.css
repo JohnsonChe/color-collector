@@ -15,7 +15,7 @@ body {
 }
 
 .modal-popup {
-  width: 40rem;
+  width: 32rem;
   height: auto;
 }
 
@@ -25,6 +25,19 @@ body {
 
 .color-wrapper {
   width: 30rem;
-  height: 20rem;
+  height: auto;
   margin: 1rem;
+}
+
+.color-display {
+  height: 5rem;
+  width: 30rem;
+  margin: .5rem;
+  border: 1px solid #828282;
+}
+
+.color-value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0px .5rem;
 }

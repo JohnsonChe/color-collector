@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   console.log(sendResponse);
   if (request.data === "colors-array") {
     const colorsArray = getAllColors()
-    sendResponse(JSON.stringify(colorsArray))
+    sendResponse(colorsArray);
   }
 
 })

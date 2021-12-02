@@ -4,7 +4,7 @@ sendMessageButton.onclick = async function (e) {
   let tab = await chrome.tabs.query(queryOptions);
 
   chrome.tabs.sendMessage(tab[0].id, { data: "colors-array" }, function (response) {
-    renderColors(JSON.parse(response));
+    renderColors(response);
   });
 }
 
