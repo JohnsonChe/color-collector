@@ -1,11 +1,9 @@
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  const colorsArray = getAllColors()
+  sendResponse(JSON.stringify(colorsArray))
+})
 
-function getCSS() {
 
-  // alert('ALERT outside')
-  console.log("TESTING OUTSIDE")
-  const bodyElement = document.querySelector('body')
-  console.log(window.getComputedStyle(bodyElement))
-}
 
 function getAllColors() {
   // regex via http://stackoverflow.com/a/7543829/149636
@@ -50,30 +48,7 @@ function getAllColors() {
 
   return allColors;
 }
-const arrOfColors = getAllColors()
-// renderColors(arrOfColors)
+// const arrOfColors = getAllColors()
+// // renderColors(arrOfColors)
 
-console.log(getAllColors())
-
-
-chrome.runtime.sendMessage(JSON.stringify(arrOfColors), function (response) {
-  console.log(response.farewell);
-});
-
-
-
-// chrome.action.onClicked.addListener((tab) => {
-//   chrome.scripting.executeScript({
-//     target: { tabId: tab.id },
-//     function: getCSS
-//   });
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   alert('ALERT on DOM LOADED')
-//   console.log("TESTING")
-//   const bodyElement = document.querySelector('body')
-//   console.log(window.getComputedStyle(bodyElement))
-
-
-// });
+// console.log(getAllColors())
