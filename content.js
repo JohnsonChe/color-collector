@@ -1,6 +1,12 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  const colorsArray = getAllColors()
-  sendResponse(JSON.stringify(colorsArray))
+  console.log(request);
+  console.log(sender);
+  console.log(sendResponse);
+  if (request.data === "colors-array") {
+    const colorsArray = getAllColors()
+    sendResponse(JSON.stringify(colorsArray))
+  }
+
 })
 
 
@@ -51,4 +57,6 @@ function getAllColors() {
 // const arrOfColors = getAllColors()
 // // renderColors(arrOfColors)
 
-// console.log(getAllColors())
+console.log(getAllColors())
+
+console.log(`FROM CONTENT MODAL POPPUP`, document.querySelector('.modal-popup__colors'))
