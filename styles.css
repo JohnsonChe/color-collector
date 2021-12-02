@@ -14,6 +14,17 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.modal-popup {
+  width: 40rem;
+  height: auto;
+}
+
 .modal-popup__title {
   font-size: 2.5rem;
+}
+
+.color-wrapper {
+  width: 30rem;
+  height: 20rem;
+  margin: 1rem;
 }

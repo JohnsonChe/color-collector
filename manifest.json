@@ -8,6 +8,17 @@
   },
   "description": "Collects all site colors",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
   ]
 }
